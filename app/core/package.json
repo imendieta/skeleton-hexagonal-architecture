@@ -1,0 +1,14 @@
+{
+  "name": "@skeleton-hexagonal-architecture/core",
+  "version": "1.0.0",
+  "main": "build/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc --build",
+    "start": "tsc --watch",
+    "test": "jest",
+  },
+  "dependencies": {
+    "jest": "^27.5.1"
+  }
+}
