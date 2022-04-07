@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc --build",
     "start": "tsc --watch",
-    "test": "jest",
+    "test": "jest"
   },
   "dependencies": {
     "jest": "^27.5.1"
