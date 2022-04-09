@@ -2,7 +2,7 @@ const headers = {
     'Content-Type': 'application/json'
 }
 
-export const get = async <T>(url:string) => {
+const get = async <T>(url:string) => {
     const response = await fetch(url, {
         method: 'GET',
         headers,
@@ -10,7 +10,7 @@ export const get = async <T>(url:string) => {
     return await response.json() as T;
 }
 
-export const post = async <T>(url:string, body:any) => {
+const post = async <T>(url:string, body:any) => {
     const response = await fetch(url, {
         method: 'POST',
         headers,
@@ -19,7 +19,7 @@ export const post = async <T>(url:string, body:any) => {
     return await response.json() as T;
 }
 
-export const put = async <T>(url:string, body:any) => {
+const put = async <T>(url:string, body:any) => {
     const response = await fetch(url, {
         method: 'PUT',
         headers,
@@ -28,10 +28,17 @@ export const put = async <T>(url:string, body:any) => {
     return await response.json() as T;
 };
 
-export const _delete = async <T>(url:string) => {
+const _delete = async <T>(url:string) => {
     const response = await fetch(url, {
         method: 'DELETE',
         headers,
     });
     return await response.json() as T;
 }
+
+export const http = {
+    get,
+    post,
+    put,
+    _delete,
+};
